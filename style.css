@@ -1,0 +1,117 @@
+body
+{
+    background-color: #87BBA2 !important;
+}
+.heading
+{
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+    height: 20%;
+    background-color: #FFF07C;
+}
+.heading h1
+{
+    margin: 0 5px;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.search-bar
+{
+    width: 100%;
+    filter: drop-shadow(1px 1px 10px #5D737E);
+    padding-bottom: 20px;
+    z-index: 0;
+    transform: translateY(-85px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #F0F7EE;
+    height: 150px;
+    border-radius: 0px 0px 100px 100px;
+}
+form
+{
+    width: 75%;
+}
+form input
+{
+
+    filter: drop-shadow(1px 1px 7px #5D737E);
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 15px 0px 15px 0px;
+    border: 2px solid black;
+    color: black;
+    background-color: rgba(240, 247, 238,0.5);
+    outline: none;
+}
+.search-bar svg
+{
+    width: 5%;
+    margin-right: 10px;
+    display: inline;
+    filter: drop-shadow(1px 1px 7px #5D737E);
+}
+.search-results
+{
+    background-color: #5D737E;
+    padding-left: 0;
+    padding-top: 0;
+    border-radius: 15px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.movie-img img
+{
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    margin-left: 0;
+    filter: drop-shadow(0px 0px 7px #5D737E);
+    animation: 2s img-anim cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.movie-desc
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes img-anim
+{
+    0%
+    {
+        transform: rotate3d(0,1,0,-45deg);
+        transform-origin: -100px 0px;
+    }
+    100%
+    {
+        transform: rotate3d(0,1,0,0deg);
+        transform-origin: 0px 0px;
+    }
+}
+.movie-desc h1
+{
+    animation: 2s desc-anim cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-weight: bold;
+
+}
+.movie-desc p
+{
+    animation: 2s desc-anim cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 30px;
+}
+@keyframes desc-anim
+{
+    0%
+    {
+        transform: rotate3d(0,1,0,-45deg);
+        transform-origin: -100px 0px;
+    }
+    100%
+    {
+        transform: rotate3d(0,1,0,0deg);
+        transform-origin: 0px 0px;
+    }
+}
